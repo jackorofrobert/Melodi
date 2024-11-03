@@ -1,0 +1,53 @@
+.loading-screen {
+  height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background: linear-gradient(rgb(0 0 0 / 73%), rgb(0 0 0 / 73%)), url('./image.jpg') no-repeat center center;
+  background-size: cover; /* Ensure the image covers the entire screen */
+  position: relative;
+}
+
+.loading-screen .loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-screen .loading-content .logo {
+  width: 215px; /* Logo size */
+  height: 242px;
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+.loading-screen .loading-content .loading-text {
+  font-family: Vazirmatn, sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  float: left;
+  margin-right: 20px;
+  font-weight: 700;
+  line-height: 31.25px;
+  text-align: left;
+}
+
+.loading-screen .loading-content .loading-spinner {
+  float: left;
+  width: 30px; /* SVG size */
+  height: 30px;
+  animation: rotate 3s linear infinite; /* Add spinning animation to the SVG */
+}
+
+/* Spinning animation for the SVG */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
